@@ -1,0 +1,14 @@
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.AssemblyInfoInputs.cache
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.AssemblyInfo.cs
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.csproj.CoreCompileInputs.cache
+C:\Users\Daria\Lab2_V14\bin\Debug\net10.0\Lab2_V14.exe
+C:\Users\Daria\Lab2_V14\bin\Debug\net10.0\Lab2_V14.deps.json
+C:\Users\Daria\Lab2_V14\bin\Debug\net10.0\Lab2_V14.runtimeconfig.json
+C:\Users\Daria\Lab2_V14\bin\Debug\net10.0\Lab2_V14.dll
+C:\Users\Daria\Lab2_V14\bin\Debug\net10.0\Lab2_V14.pdb
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.dll
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\refint\Lab2_V14.dll
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.pdb
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.genruntimeconfig.cache
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\ref\Lab2_V14.dll
