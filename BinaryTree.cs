@@ -2,49 +2,42 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class BinaryTree<T> : IEnumerable<T> where T : IComparable<T>
+public class BinaryTree<T> : IEnumerable<T>
 {
-    public TreeNode<T> Root; 
+    public TreeNode<T> Root;
+    private IComparer<T> comparer;
 
-   
-    public void Add(T data)
+    public BinaryTree()
     {
-        if (Root == null)
-        {
-            Root = new TreeNode<T>(data);
-            return;
-        }
-
-        TreeNode<T> current = Root;
-        while (true)
-        {
-            if (data.CompareTo(current.Data) < 0)
-            {
-                if (current.Left == null)
-                {
-                    current.Left = new TreeNode<T>(data);
-                    break;
-                }
-                current = current.Left;
-            }
-            else
-            {
-                if (current.Right == null)
-                {
-                    current.Right = new TreeNode<T>(data);
-                    break;
-                }
-                current = current.Right;
-            }
-        }
+        comparer = Comparer<T>.Default;
     }
 
-    
+    public BinaryTree(IComparer<T> comparer)
+    {
+        this.comparer = comparer;
+    }
+
+    public void Add(T data)
+    {
+        Root = AddNode(Root, data);
+    }
+
+    private TreeNode<T> AddNode(TreeNode<T> node, T data)
+    {
+        if (node == null)
+            return new TreeNode<T>(data);
+
+        if (comparer.Compare(data, node.Data) < 0)
+            node.Left = AddNode(node.Left, data);
+        else
+            node.Right = AddNode(node.Right, data);
+
+        return node;
+    }
+
     public IEnumerator<T> GetEnumerator()
     {
-        List<T> list = new List<T>();
-        PostOrder(Root, list);
-        return list.GetEnumerator();
+        return PostOrder(Root).GetEnumerator();
     }
 
     IEnumerator IEnumerable.GetEnumerator()
@@ -52,13 +45,12 @@ public class BinaryTree<T> : IEnumerable<T> where T : IComparable<T>
         return GetEnumerator();
     }
 
-    
-    private void PostOrder(TreeNode<T> node, List<T> list)
+    private IEnumerable<T> PostOrder(TreeNode<T> node)
     {
-        if (node == null) return;
+        if (node == null) yield break;
 
-        PostOrder(node.Left, list);   
-        PostOrder(node.Right, list);  
-        list.Add(node.Data);          
+        foreach (var x in PostOrder(node.Left)) yield return x;
+        foreach (var x in PostOrder(node.Right)) yield return x;
+        yield return node.Data;
     }
 }

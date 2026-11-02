@@ -12,3 +12,4 @@ C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\refint\Lab2_V14.dll
 C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.pdb
 C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.genruntimeconfig.cache
 C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\ref\Lab2_V14.dll
+C:\Users\Daria\Lab2_V14\obj\Debug\net10.0\Lab2_V14.sourcelink.json
